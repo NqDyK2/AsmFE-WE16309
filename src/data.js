@@ -1,4 +1,4 @@
-export const data = [
+const data = [
     {
         id: 1, title: "Vinh Danh 295 sinh viên FPT Polytechnic học kỳ Spring 2018", desc1: "Tối ngày 16/06/2018, Cao đẳng FPT Polytechnic", desc2: "Hà Nội đã tổ chức Lễ tôn vinh Ong vàng Poly", desc3: "tuyên dương 295 cá nhân và tập thể có thành", desc4: "tích xuất sắc trong học tập cũng như hoạt...", img: "./img/img1.jpg",
     },
@@ -9,7 +9,8 @@ export const data = [
         id: 3, title: "Sinh viên Fpoly trải nghiệm thực tế tại Mường Thanh Luxury", desc1: "Với triết lý đào tạo Thực học - Thực nghiệp ,", desc2: "Cao đẳng FPT Polytechnic Đà Nẵng thường", desc3: "xuyên tổ chức cho sinh viên tham quan các", desc4: "đơn vị doanh nghiệp...", img: "./img/img3.jpg",
     },
 ];
-export const Products = [
+export default data;
+const Products = [
     {
         createdAt: "2022-01-10T07:26:52.549Z",
         name: "Annie Stroman",
