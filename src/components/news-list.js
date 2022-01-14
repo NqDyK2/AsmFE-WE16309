@@ -1,18 +1,22 @@
 import data from "../data";
 
 const NewsList = {
-    print() {
+    render() {
         return /* html */`
-    ${data.map((post) => `
-          <div class="border border-slate-300 max-w-full max-h-full p-auto m-auto">
-              <img src="${post.img}" class="px-auto py-6 m-auto" alt="" width="350px" >
-              <h3 class=" pb-3 text-center  font-bold text-xl text-orange-700 m-auto">${post.title}</h3>
-              <div class="pb-5 text-center">
-                <span class="text-center m-auto text-base">${post.desc1} ${post.desc2} ${post.desc3} ${post.desc4}
-                </span>
-              </div>
-          </div>
-           `).join("")}
+                <h2 class="font-semibold text-2xl uppercase text-blue-800 my-4">Tin tức học tập</h2>
+                <div class="grid grid-cols-3 gap-8">
+                    ${data.map((post) => `
+                        <div class="border p-4">
+                            <a href="/news/${post.id}">
+                                <img src="${post.img}" alt="" class="" />
+                            </a>
+                            <h3 class="my-3 text-center"><a  href="/news/${post.id}" class="font-semibold  text-lg text-orange-500 dark:text-orange-500">${post.title}</a></h3>                    
+                            <p class="text-center text-gray-700 dark:text-gray-500">${post.desc}</p>
+                        </div>
+                    `).join("")}
+                    
+                </div>
+        
         `;
     },
 };

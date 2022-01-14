@@ -1,7 +1,7 @@
-import { Products } from "../../data";
+import data from "../data";
 
 const Table = {
-    print() {
+    render() {
         return /* html */`
         <div> 
             <table class ="table-auto"> 
@@ -15,13 +15,13 @@ const Table = {
                     </tr>
                 </thead>
                 <tbody>
-                ${Products.map((sp) => `
+                ${data.map((sp) => `
                     <tr>
                         <td>${sp.id}</td>
-                        <td>${sp.name}</td>
+                        <td>${sp.title}</td>
                         <td>${sp.desc}</td>
-                        <td><img src="${sp.img}" width="50px" /> </td>
-                        <td><a href=""> Edit </a></td>
+                        <td><img src="${sp.img}" width="50px" class="rounded-full" /> </td>
+                        <td><a href="/edit/${sp.id}"> Edit </a></td>
                     </tr>
                 `).join("")}
                 </tbody>

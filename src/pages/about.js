@@ -1,9 +1,8 @@
-import Table from "../components/allProducts";
 import Footer from "../components/footer";
 import HeadLogo from "../components/header-logo";
 import Menu from "../components/menu";
 
-const TableProductsPage = {
+const AboutPage = {
     render() {
         return /* html */`
         <header class="mb-3">
@@ -17,13 +16,13 @@ const TableProductsPage = {
                 
             </div>
         </header> 
-        <h1 class="text-center font-semibold text-teal-600 dark:text-teal-400 text-3xl mb-4">Table Products</h1>
-        ${Table.render()}
+        <h1 class="text-2xl text-center text-red-600 dark:text-red-300 my-10 font-bold">About Page</h1>
+        <div class=" text-center">Nothing here</div>
         <footer>
             ${Footer.render()}
         </footer>
-        
+            
         `;
     },
 };
-export default TableProductsPage;
+export default AboutPage;

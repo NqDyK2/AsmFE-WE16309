@@ -1,9 +1,9 @@
-import Table from "../components/allProducts";
+import Contact from "../components/contactForm";
 import Footer from "../components/footer";
 import HeadLogo from "../components/header-logo";
 import Menu from "../components/menu";
 
-const TableProductsPage = {
+const ContactPage = {
     render() {
         return /* html */`
         <header class="mb-3">
@@ -17,13 +17,13 @@ const TableProductsPage = {
                 
             </div>
         </header> 
-        <h1 class="text-center font-semibold text-teal-600 dark:text-teal-400 text-3xl mb-4">Table Products</h1>
-        ${Table.render()}
+        <main>
+            ${Contact.render()}
+        </main>
         <footer>
             ${Footer.render()}
         </footer>
-        
         `;
     },
 };
-export default TableProductsPage;
+export default ContactPage;

@@ -1,12 +1,11 @@
 const Menu = {
-    print() {
+    render() {
         return /* html */`
-        <ul class="px-2 mx-6 ">
-            <li class="inline-block px-3 text-white hover:underline"><a href="/">Trang chủ</a></li>
-            <li class="inline-block px-3 text-white hover:underline"><a href="/tuyensinh">Tuyển sinh</a></li>
-            <li class="inline-block px-3 text-white hover:underline"><a href="/daotao">Chương trình đào tạo</a></li>
-            <li class="inline-block px-3 text-white hover:underline"><a href="/gocsinhvien">Góc sinh viên</a></li>
-            <li class="inline-block px-3 text-white hover:underline"><a href="/tuyendung">Tuyển dụng</a></li>
+        <ul class="px-2 mx-6 text-center ">
+            <li class="inline-block  px-5 text-white hover:underline"><a href="/">Home</a></li>
+            <li class="inline-block  px-5 text-white hover:underline"><a href="/about">About</a></li>
+            <li class="inline-block  px-5 text-white hover:underline"><a href="/products">Product</a></li>
+            <li class="inline-block  px-5 text-white hover:underline"><a href="/contact">Contact</a></li>
         </ul>`;
     },
 };

@@ -1,8 +1,6 @@
 const Banner = {
-    print() {
-        return /* html */`
-            <img src="./img/gbn.gif" class="max-w-7xl" alt="" width="100%" />
-        `;
+    render() {
+        return ` <img src="./img/gbn.gif" />`;
     },
 };
 export default Banner;
