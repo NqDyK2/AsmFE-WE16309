@@ -21,7 +21,7 @@ const Table = {
                         <td>${sp.title}</td>
                         <td>${sp.desc}</td>
                         <td><img src="${sp.img}" width="50px" class="rounded-full" /> </td>
-                        <td><a href="/edit/${sp.id}"> Edit </a></td>
+                        <td><a href="admin/edit/${sp.id}"> Edit </a></td>
                     </tr>
                 `).join("")}
                 </tbody>

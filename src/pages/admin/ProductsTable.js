@@ -1,7 +1,7 @@
-import Table from "../components/allProducts";
-import Footer from "../components/footer";
-import HeadLogo from "../components/header-logo";
-import Menu from "../components/menu";
+import Table from "../../components/allProducts";
+import Footer from "../../components/footer";
+import HeadLogo from "../../components/header-logo";
+import Menu from "../../components/menu";
 
 const TableProductsPage = {
     render() {
