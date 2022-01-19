@@ -1,7 +1,7 @@
-import Footer from "../components/footer";
-import HeadLogo from "../components/header-logo";
-import Menu from "../components/menu";
-import data from "../data";
+import Footer from "../../components/footer";
+import HeadLogo from "../../components/header-logo";
+import Menu from "../../components/menu";
+import data from "../../data";
 
 const editProduct = {
     render(id) {

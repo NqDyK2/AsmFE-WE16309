@@ -1,10 +1,10 @@
 import Navigo from "navigo";
 import AboutPage from "./pages/about";
 import DetailNewsPage from "./pages/detail";
-import editProduct from "./pages/editProducts";
 import HomePage from "./pages/home";
-import TableProductsPage from "./pages/ProductsTable";
+import TableProductsPage from "./pages/admin/ProductsTable";
 import ContactPage from "./pages/Contact";
+import editProduct from "./pages/admin/editProducts";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -19,13 +19,13 @@ router.on({
     "/about": () => {
         print(AboutPage.render());
     },
-    "/products": () => {
+    "admin/products": () => {
         print(TableProductsPage.render());
     },
     "/contact": () => {
         print(ContactPage.render());
     },
-    "/news/:id": (value) => {
+    "/products/:id": (value) => {
         print(DetailNewsPage.render(value.data.id));
     },
     "/edit/:id": (value) => {
