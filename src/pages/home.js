@@ -1,32 +1,28 @@
 import Banner from "../components/banner";
 import Footer from "../components/footer";
-import HeadLogo from "../components/header-logo";
-import Menu from "../components/menu";
-import NewsList from "../components/news-list";
+import Header from "../components/header";
+import News from "../components/news";
 
 const HomePage = {
-    render() {
+    async render() {
         return /* html */`
-        <header class="mb-3">
-            <div class="bg-sky-900">
-                ${HeadLogo.render()}
+            <div class="max-w-5xl mx-auto">
+                <header>
+                    ${Header.render()}
+                </header>
+                <main>
+                    <div class="banner">
+                        ${Banner.render()}
+                    </div>
+                    <div class="news">
+                        ${await News.render()}
+                    </div>
+                </main>
+                <footer>
+                    ${Footer.render()}
+                </footer>
             </div>
-            <div class="bg-yellow-600 text-sm py-2">
-                <nav class="max-w-6xl">
-                    ${Menu.render()}
-                </nav>
-                
-            </div>
-        </header> 
-                <div class="banner">
-                    ${Banner.render()}
-                </div>
-                <div>
-                    ${NewsList.render()}
-                </div>
-        <footer>
-            ${Footer.render()}
-        </footer>
+            
         `;
     },
 };

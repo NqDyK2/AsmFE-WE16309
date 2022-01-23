@@ -1,43 +1,31 @@
 import Navigo from "navigo";
 import AboutPage from "./pages/about";
-import DetailNewsPage from "./pages/detail";
+import AdminNews from "./pages/admin/news";
+import AdminNewsAdd from "./pages/admin/news/add";
+import DashboardPage from "./pages/dashboard";
+import DetailPage from "./pages/detail";
 import HomePage from "./pages/home";
-import TableProductsPage from "./pages/admin/ProductsTable";
-import ContactPage from "./pages/Contact";
-import editProduct from "./pages/admin/editProducts";
+import ProductPage from "./pages/product";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (content) => {
-    document.getElementById("app").innerHTML = content;
+const print = async (content) => {
+    document.querySelector("#app").innerHTML = await content.render();
+    if (content.afterRender) await content.afterRender();
 };
 
 router.on({
-    "/": () => {
-        print(HomePage.render());
+    "/": () => print(HomePage),
+    "/about": () => print(AboutPage),
+    "/product": () => print(ProductPage),
+    "/news/:id": ({ data }) => {
+        const { id } = data;
+        print(DetailPage.render(id));
     },
-    "/about": () => {
-        print(AboutPage.render());
-    },
-    "admin/products": () => {
-        print(TableProductsPage.render());
-    },
-    "/contact": () => {
-        print(ContactPage.render());
-    },
-    "/products/:id": (value) => {
-        print(DetailNewsPage.render(value.data.id));
-    },
-    "/edit/:id": (value) => {
-        print(editProduct.render(value.data.id));
-    },
+    "/admin/dashboard": () => print(DashboardPage),
+    "/admin/products": () => console.log("admin product"),
+    "/admin/news": () => print(AdminNews),
+    "/admin/news/add": () => print(AdminNewsAdd),
 });
-router.resolve();
 
-// const arrNumber = [
-//     { id: "1", name: "A" },
-//     { id: "2", name: "B" },
-//     { id: "3", name: "C" },
-// ];
-// const result = arrNumber.find((num) => num.id === "3");
-// console.log(result);
+router.resolve();
