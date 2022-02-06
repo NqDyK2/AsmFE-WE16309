@@ -1,31 +1,31 @@
 import Navigo from "navigo";
 import AboutPage from "./pages/about";
-import AdminNews from "./pages/admin/news";
-import AdminNewsAdd from "./pages/admin/news/add";
-import DashboardPage from "./pages/dashboard";
+import Dashboard from "./pages/admin/dashboard";
+import AdminNewsPage from "./pages/admin/news";
+import AdminAddPost from "./pages/admin/news/add";
+import AdminEditPost from "./pages/admin/news/edit";
 import DetailPage from "./pages/detail";
 import HomePage from "./pages/home";
 import ProductPage from "./pages/product";
+import Signup from "./pages/signup";
 
-const router = new Navigo("/", { linksSelector: "a" });
+const router = new Navigo("/", { linksSelector: "a", hash: true });
 
-const print = async (content) => {
-    document.querySelector("#app").innerHTML = await content.render();
-    if (content.afterRender) await content.afterRender();
+const print = async (content, id) => {
+    document.querySelector("#app").innerHTML = await content.render(id);
+    if (content.afterRender) content.afterRender(id);
 };
 
 router.on({
     "/": () => print(HomePage),
     "/about": () => print(AboutPage),
     "/product": () => print(ProductPage),
-    "/news/:id": ({ data }) => {
-        const { id } = data;
-        print(DetailPage.render(id));
-    },
-    "/admin/dashboard": () => print(DashboardPage),
-    "/admin/products": () => console.log("admin product"),
-    "/admin/news": () => print(AdminNews),
-    "/admin/news/add": () => print(AdminNewsAdd),
+    "/signup": () => print(Signup),
+    "/news/:id": ({ data }) => print(DetailPage, data.id),
+    "/admin/dashboard": () => print(Dashboard),
+    "/admin/news": () => print(AdminNewsPage),
+    "/admin/news/add": () => print(AdminAddPost),
+    "/admin/news/:id/edit": ({ data }) => print(AdminEditPost, data.id),
 });
 
 router.resolve();

@@ -1,7 +1,7 @@
-import instance from "./instance";
+import instance from "./config";
 
 export const getAll = () => {
-    const url = "/posts";
+    const url = `/posts`;
     return instance.get(url);
 };
 export const get = (id) => {
@@ -15,4 +15,8 @@ export const add = (post) => {
 export const remove = (id) => {
     const url = `/posts/${id}`;
     return instance.delete(url);
+};
+export const update = (post) => {
+    const url = `/posts/${post.id}`;
+    return instance.put(url, post);
 };

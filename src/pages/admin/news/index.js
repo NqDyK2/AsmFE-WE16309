@@ -1,88 +1,101 @@
-import { getAll, remove } from "../../../api/posts";
-import NavAdmin from "../../../components/NavAdmin";
+import toastr from "toastr";
+import { getAll, remove } from "../../../api/post";
+import AdminNav from "../../../components/AdminNav";
+import "toastr/build/toastr.min.css";
 
-const AdminNews = {
+const AdminNewsPage = {
     async render() {
         const { data } = await getAll();
         return /* html */`
         <div class="min-h-full">
-            ${NavAdmin.render()}
+            ${AdminNav.render()}
             <header class="bg-white shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <!-- This example requires Tailwind CSS v2.0+ -->
-                <div class="lg:flex lg:items-center lg:justify-between">
-                <div class="flex-1 min-w-0">
-                    <h2
-                    class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate"
-                    >
-                    Quản lý tin tức
-                    </h2>
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <!-- This example requires Tailwind CSS v2.0+ -->
+                    <div class="lg:flex lg:items-center lg:justify-between">
+                        <div class="flex-1 min-w-0">
+                            <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+                                Back End Developer
+                            </h2>
+                        </div>
+                        <div class="mt-5 flex lg:mt-0 lg:ml-4">
+                            <a href="/#/admin/news/add" class="sm:ml-3">
+                                <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                <!-- Heroicon name: solid/check -->
+                                <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                Add new
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="mt-5 flex lg:mt-0 lg:ml-4">
-                    <a href="/admin/news/add" class="sm:ml-3">
-                        <button
-                            type="button"
-                            class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        >
-                            Thêm mới
-                        </button>
-                    </a>
-                </div>
-                </div>
-            </div>
             </header>
             <main>
-            <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-                <!-- Replace with your content -->
-                <div class="px-4 py-6 sm:px-0">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>STT</th>
-                                <th>Tiêu đề</th>
-                                <th>Ảnh</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${data.map((post, index) => `
-                                <tr>
-                                    <td>${index + 1}</td>
-                                    <td>${post.title}</td>
-                                    <td><img src="${post.img}" width="50"/></td>
-                                    <td>
-                                        <a href="/admin/news/${post.id}/edit">Edit</a>
-                                        <button data-id="${post.id}" class="btn btn-remove">Xóa</button>
-                                    </td>
-                                </tr>
-                            `).join("")}
-                            
-                        </tbody>
-                    </table>
+                <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                    <div class="px-4 py-6 sm:px-0">
+                            <div class="flex flex-col">
+                                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                        <table class="min-w-full divide-y divide-gray-200">
+                                            <thead class="bg-gray-50">
+                                                <tr>
+                                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">STT</th>
+                                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tiêu đề</th>
+                                                    <th scope="col" class="relative px-6 py-3"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="bg-white divide-y divide-gray-200">
+                                                ${data.map((post, index) => `
+                                                        <tr>
+                                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                                ${index + 1}
+                                                            </td>
+                                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                                ${post.title}
+                                                            </td>
+                                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                                <a href="/#/admin/news/${post.id}/edit">Edit</a>
+                                                                <button data-id=${post.id} class="btn btn-remove inline-block px-4 py-3 text-white rounded bg-indigo-500 hover:bg-indigo-800">Delete</button>
+                                                            </td>
+                                                        </tr>
+                                                
+                                                `).join("")}
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+
+                    </div>
+                    <!-- /End replace -->
                 </div>
-                <!-- /End replace -->
-            </div>
             </main>
         </div>
+        
         `;
     },
     afterRender() {
-        // lấy danh sách button sau khi render
-        const buttons = document.querySelectorAll(".btn");
-        // tạo vòng lặp cho nodelist button
-        buttons.forEach((btn) => {
-            // lấy ID từ thuộc tính data-id của button
+        // lấy toàn bộ button thông qua class .bnt
+        const btns = document.querySelectorAll(".btn");
+        // tạo vòng lặp để lấy từng button element
+        btns.forEach((btn) => {
+            // Lấy giá trị ID thông qua thuộc tính data-id của button
             const { id } = btn.dataset;
             btn.addEventListener("click", () => {
-                const confirm = window.confirm("Ban co muon xoa bai viet nay khong?");
+                const confirm = window.confirm("Bạn có chắc chắn muốn xóa không?");
                 if (confirm) {
-                    // gọi hàm delete trong folder API và bắn id vào hàm
                     remove(id).then(() => {
-                        console.log("Da xoa thanh cong");
+                        toastr.success("Bạn đã xóa thành công");
                     });
                 }
+                // remove
             });
         });
     },
 };
-export default AdminNews;
+export default AdminNewsPage;
