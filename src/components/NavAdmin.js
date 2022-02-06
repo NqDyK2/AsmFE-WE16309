@@ -1,5 +1,5 @@
 const NavAdmin = {
-    render(){
+    render() {
         return `
         <nav class="bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -227,7 +227,7 @@ const NavAdmin = {
         </div>
       </nav>
         
-        `
-    }
+        `;
+    },
 };
 export default NavAdmin;

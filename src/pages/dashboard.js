@@ -1,7 +1,7 @@
 import NavAdmin from "../components/NavAdmin";
 
 const DashboardPage = {
-    render(){
+    render() {
         return `
         <div class="min-h-full">
             ${NavAdmin.render()}
@@ -30,7 +30,7 @@ const DashboardPage = {
             </div>
             </main>
         </div>
-        `
-    }
-}
+        `;
+    },
+};
 export default DashboardPage;

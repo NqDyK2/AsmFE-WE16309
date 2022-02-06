@@ -1,4 +1,4 @@
-import { getAll } from '../api/posts';
+import { getAll } from "../api/posts";
 
 const News = {
     async render() {
@@ -14,7 +14,7 @@ const News = {
                 </div>
                 `).join("")}
             </div>
-        `
+        `;
     },
 
 };

@@ -2,9 +2,9 @@ import { getAll, remove } from "../../../api/posts";
 import NavAdmin from "../../../components/NavAdmin";
 
 const AdminNews = {
-    async render(){
+    async render() {
         const { data } = await getAll();
-        return /*html*/`
+        return /* html */`
         <div class="min-h-full">
             ${NavAdmin.render()}
             <header class="bg-white shadow">
@@ -47,7 +47,7 @@ const AdminNews = {
                         <tbody>
                             ${data.map((post, index) => `
                                 <tr>
-                                    <td>${index+1}</td>
+                                    <td>${index + 1}</td>
                                     <td>${post.title}</td>
                                     <td><img src="${post.img}" width="50"/></td>
                                     <td>
@@ -64,25 +64,25 @@ const AdminNews = {
             </div>
             </main>
         </div>
-        `
+        `;
     },
-    afterRender(){
+    afterRender() {
         // lấy danh sách button sau khi render
-        const buttons = document.querySelectorAll('.btn');
+        const buttons = document.querySelectorAll(".btn");
         // tạo vòng lặp cho nodelist button
-        buttons.forEach(btn => {
+        buttons.forEach((btn) => {
             // lấy ID từ thuộc tính data-id của button
-            const id = btn.dataset.id;
-            btn.addEventListener('click', () => {
+            const { id } = btn.dataset;
+            btn.addEventListener("click", () => {
                 const confirm = window.confirm("Ban co muon xoa bai viet nay khong?");
-                if(confirm){
-                     // gọi hàm delete trong folder API và bắn id vào hàm
+                if (confirm) {
+                    // gọi hàm delete trong folder API và bắn id vào hàm
                     remove(id).then(() => {
-                        console.log('Da xoa thanh cong')
-                    })
+                        console.log("Da xoa thanh cong");
+                    });
                 }
-            })
+            });
         });
-    }
-}
+    },
+};
 export default AdminNews;

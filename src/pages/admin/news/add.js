@@ -1,10 +1,10 @@
+// import axios from "axios";
 import NavAdmin from "../../../components/NavAdmin";
-import axios from 'axios';
 import { add } from "../../../api/posts";
 
 const AdminNewsAdd = {
-    render(){
-        return /*html*/`
+    render() {
+        return /* html */`
         <div class="min-h-full">
             ${NavAdmin.render()}
             <header class="bg-white shadow">
@@ -46,19 +46,19 @@ const AdminNewsAdd = {
             </div>
             </main>
         </div>
-        `
+        `;
     },
-    afterRender(){
+    afterRender() {
         // console.log(document.querySelector('#form-add-post'));
-        const formAdd = document.querySelector('#form-add-post');
-        formAdd.addEventListener('submit', function(e){
+        const formAdd = document.querySelector("#form-add-post");
+        formAdd.addEventListener("submit", (e) => {
             e.preventDefault();
             add({
-                title: document.querySelector('#title-post').value,
-                img: document.querySelector('#img-post').value,
-                desc: document.querySelector('#desc-post').value
+                title: document.querySelector("#title-post").value,
+                img: document.querySelector("#img-post").value,
+                desc: document.querySelector("#desc-post").value,
             });
         });
-    }
-}
+    },
+};
 export default AdminNewsAdd;
