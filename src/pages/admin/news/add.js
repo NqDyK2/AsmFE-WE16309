@@ -1,5 +1,8 @@
+import axios from "axios";
+import AdminNewsPage from ".";
 import { add } from "../../../api/post";
 import AdminNav from "../../../components/AdminNav";
+import { reRender } from "../../../utils";
 
 const AdminAddPost = {
     async render() {
@@ -25,7 +28,7 @@ const AdminAddPost = {
                     <div class="px-4 py-6 sm:px-0">
                         <form id="form-add">
                             <input type="text" id="title-post" class="border border-black" placeholder="Title" /> <br>
-                            <input type="text" id="img-post" class="border border-black"  placeholder="Image" /><br>
+                            <input type="file" id="img-post" class="border border-black"  placeholder="Image" /><br>
                             <textarea name="" id="desc-post" cols="30" rows="10" class="border border-black"></textarea>
                             <button>Add New</button>
                         </form>
@@ -39,13 +42,32 @@ const AdminAddPost = {
     },
     afterRender() {
         const formAdd = document.querySelector("#form-add");
-        formAdd.addEventListener("submit", (e) => {
+        const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dielvkumg/image/upload";
+        const CLOUDINARY_PRESET = "AsmNqDyy";
+
+        formAdd.addEventListener("submit", async (e) => {
             e.preventDefault();
+
+            const file = document.querySelector("#img-post").files[0];
+
+            const formData = new FormData();
+            formData.append("file", file);
+            formData.append("upload_preset", CLOUDINARY_PRESET);
+
+            const { data } = await axios.post(CLOUDINARY_API, formData, {
+                headers: {
+                    "Content-Type": "application/form-data",
+                },
+            });
+
             add({
                 title: document.querySelector("#title-post").value,
-                img: document.querySelector("#img-post").value,
+                img: data.url,
                 desc: document.querySelector("#desc-post").value,
             });
+            window.location.href = "/#/admin/news";
+
+            reRender(AdminNewsPage, "#app");
         });
     },
 };
