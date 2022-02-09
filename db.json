@@ -180,5 +180,13 @@
       "desc": "Test Được sẽ hiện không được sẽ không hiện",
       "id": "skmmqmx"
     }
+  ],
+  "users": [
+    {
+      "email": "duynqph16692@fpt.edu.vn",
+      "password": "$2a$10$xK0LE2BSPvoJ6xmE6WbdIuS72.sldZQC/OHjyDtaCWo0Q3iVbP0CG",
+      "username": "duynqph16692",
+      "id": 1
+    }
   ]
 }
