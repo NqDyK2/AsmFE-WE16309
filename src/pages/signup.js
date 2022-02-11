@@ -2,11 +2,10 @@ import { signup } from "../api/user";
 
 const SignUp = {
     render() {
-        return /* html */ `<form id="formSignup">
-                <input type="text" placeholder="username" id="username" /> <br />
-                <input type="email" placeholder="email" id="email" /> <br />
-                <input type="password" placeholder="password" id="password" /> <br />
-                <button class="border border-black">Đăng ký</button>
+        return `<form id="formSignup">
+                <input type="email" id="email" class="border border-black" placeholder="Your email"/>
+                <input type="password" id="password" class="border border-black" placeholder="Your password"/>
+                <button>Đăng ký</button>
         </form>`;
     },
     afterRender() {
@@ -14,7 +13,6 @@ const SignUp = {
         formSignup.addEventListener("submit", (e) => {
             e.preventDefault();
             signup({
-                username: document.querySelector("#username").value,
                 email: document.querySelector("#email").value,
                 password: document.querySelector("#password").value,
             });

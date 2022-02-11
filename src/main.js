@@ -21,13 +21,13 @@ router.on({
     "/": () => print(HomePage),
     "/about": () => print(AboutPage),
     "/product": () => print(ProductPage),
-    "/signup": () => print(Signup),
-    "/signin": () => print(Signin),
     "/news/:id": ({ data }) => print(DetailPage, data.id),
     "/admin/dashboard": () => print(Dashboard),
     "/admin/news": () => print(AdminNewsPage),
     "/admin/news/add": () => print(AdminAddPost),
     "/admin/news/:id/edit": ({ data }) => print(AdminEditPost, data.id),
+    "/signup": () => print(Signup),
+    "/signin": () => print(Signin),
 });
 
 router.resolve();

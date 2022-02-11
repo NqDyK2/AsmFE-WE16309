@@ -2,20 +2,29 @@ import { signin } from "../api/user";
 
 const Signin = {
     render() {
-        return /* html */ `<form id="formSignup">
-                <input type="email" placeholder="email" id="email" /> <br />
-                <input type="password" placeholder="password" id="password" /> <br />
-                <button class="border border-black">Đăng nhập</button>
+        return `<form id="formSignin">
+                <input type="email" id="email" class="border border-black" placeholder="Your email"/>
+                <input type="password" id="password" class="border border-black" placeholder="Your password"/>
+                <button>Đăng nhập</button>
         </form>`;
     },
     afterRender() {
-        const formSignin = document.querySelector("#formSignup");
-        formSignin.addEventListener("submit", (e) => {
+        const formSignin = document.querySelector("#formSignin");
+        formSignin.addEventListener("submit", async (e) => {
             e.preventDefault();
-            signin({
+            // call API login
+            const { data } = await signin({
                 email: document.querySelector("#email").value,
                 password: document.querySelector("#password").value,
             });
+            // lưu dữ liệu vào localStorage
+            localStorage.setItem("user", JSON.stringify(data.user));
+            // kiểm tra quyền dựa trên ID
+            if (data.user.id === 1) {
+                document.location.href = "/#/admin/dashboard";
+            } else {
+                document.location.href = "/#/";
+            }
         });
     },
 };
