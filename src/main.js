@@ -16,7 +16,18 @@ const print = async (content, id) => {
     document.querySelector("#app").innerHTML = await content.render(id);
     if (content.afterRender) content.afterRender(id);
 };
-
+router.on("/admin/*", () => {}, {
+    before: (done) => {
+        const userId = JSON.parse(localStorage.getItem("user")).id;
+        // nếu userId === 1 thì tôi mới render
+        if (userId === 1) {
+            done();
+        } else {
+            // ngược thì lại redirect về trang chủ
+            document.location.href = "/";
+        }
+    },
+});
 router.on({
     "/": () => print(HomePage),
     "/about": () => print(AboutPage),

@@ -7,7 +7,9 @@ const HomePage = {
     async render() {
         return /* html */`
         <div class="max-w-5xl mx-auto">
-            ${Header.render()}
+            <div id="header">
+                ${Header.render()}
+            </div>
             <main>
                 <div class="banner">
                     ${Banner.render()}

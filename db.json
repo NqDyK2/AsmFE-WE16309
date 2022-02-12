@@ -92,13 +92,6 @@
       "id": "27"
     },
     {
-      "createdAt": "2022-01-19T01:45:11.910Z",
-      "title": "Trần Văn Kiên",
-      "img": "https://picsum.photos/1500/400",
-      "desc": "Chú thích người dùng",
-      "id": "29"
-    },
-    {
       "createdAt": "2022-01-18T08:16:02.361Z",
       "title": "Thêm mới bài viết",
       "img": "http://placeimg.com/640/480/business",
@@ -187,6 +180,11 @@
       "password": "$2a$10$xK0LE2BSPvoJ6xmE6WbdIuS72.sldZQC/OHjyDtaCWo0Q3iVbP0CG",
       "username": "duynqph16692",
       "id": 1
+    },
+    {
+      "email": "nqdy0110@gmail.com",
+      "password": "$2a$10$gghy0i9Afgi4fTJSOmlFgOjsy3mInr9TK6mJTOc3guW8vuLxoLGR.",
+      "id": 2
     }
   ]
 }
