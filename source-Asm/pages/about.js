@@ -18,6 +18,9 @@ const AboutPage = {
         
         `;
     },
+    afterRender() {
+        Header.afterRender();
+    },
 };
 
 export default AboutPage;

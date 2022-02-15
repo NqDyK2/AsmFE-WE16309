@@ -48,6 +48,7 @@ const AdminNewsPage = {
                                                 <tr>
                                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">STT</th>
                                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tiêu đề</th>
+                                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Img </th>
                                                     <th scope="col" class="relative px-6 py-3"></th>
                                                 </tr>
                                             </thead>
@@ -60,6 +61,7 @@ const AdminNewsPage = {
                                                             <td class="px-6 py-4 whitespace-nowrap">
                                                                 ${post.title}
                                                             </td>
+                                                            <td class="px-6 py-4 whitespace-nowrap"><img src="${post.img}" width="100px"/></td>
                                                             <td class="px-6 py-4 whitespace-nowrap">
                                                                 <a href="/#/admin/news/${post.id}/edit">Edit</a>
                                                                 <button data-id=${post.id} class="btn btn-remove inline-block px-4 py-3 text-white rounded bg-indigo-500 hover:bg-indigo-800">Delete</button>
