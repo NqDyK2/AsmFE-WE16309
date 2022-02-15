@@ -186,5 +186,28 @@
       "password": "$2a$10$gghy0i9Afgi4fTJSOmlFgOjsy3mInr9TK6mJTOc3guW8vuLxoLGR.",
       "id": 2
     }
+  ],
+  "products": [
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "1"
+    },
+    {
+      "name": "Sản phẩm B",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "200",
+      "id": "2"
+    },
+    {
+      "name": "Sản phẩm C",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "300",
+      "id": "3"
+    }
   ]
 }
