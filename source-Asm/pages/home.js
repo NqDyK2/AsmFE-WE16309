@@ -17,8 +17,10 @@ const HomePage = {
                 <div class="news">
                     ${await News.render()}
                 </div>
+                
             </main>
-            ${Footer.render()}
+            <footer class="text-center">${Footer.render()} </footer>
+            
         </div>
             
         `;

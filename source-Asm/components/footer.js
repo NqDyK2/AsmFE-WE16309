@@ -1,6 +1,10 @@
 const Footer = {
     render() {
-        return `<p>Copy right by Datlt</p>`;
+        return `
+        <div class="">
+            <p class="bg-gray-800 text-white text-center py-5">NqDyy^^</p>
+        </div>
+        `;
     },
 };
 export default Footer;
