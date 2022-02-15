@@ -4,17 +4,27 @@ const News = {
     async render() {
         const { data } = await getAll();
         return /* html */ `
-                    <h2 class="font-semibold text-blue-900 my-4 uppercase text-2xl">Tin tức học tập</h2>
-                    <div class="grid grid-cols-3 gap-8">
-                        ${data.map((post) => `
-                        <div class="border p-3">
-                            <a href="/#/news/${post.id}"><img src="${post.img}" alt="" /></a>
-                            <h3 class="my-3"><a href="/news/${post.id}" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
-                            <p>${post.desc}</p>
-                        </div>
-                        `).join("")}
+        
+        <h2 class="font-semibold text-blue-900 mt-5 uppercase text-2xl ">Fast News</h2>
+                    <div class="bg-white">
+        <div class="max-w-3xl mx-auto py-16  px-4 sm:py-4  sm:px-6 lg:max-w-7xl lg:px-8">
+            <h2 class="sr-only">Products</h2>
+            <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+            ${data.map((post) => /* html */`
+                <a href="/#/news/${post.id}" class="group">
+                
+                    <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+                        <img src="${post.img}"
+                        alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+                        class="w-full h-full object-center object-cover group-hover:opacity-75">
                     </div>
-                    
+                    <h3 class="mt-4 text-sm text-gray-700">${post.title}</h3>
+                    <p class="mt-1 text-lg font-medium text-gray-900">${post.desc}</p>
+                    `).join("")}
+                </a>
+   <!-- More products... -->
+            </div>
+        </div>
                     `;
     },
 };
