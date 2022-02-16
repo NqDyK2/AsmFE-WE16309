@@ -4,14 +4,11 @@ import AboutPage from "./pages/about";
 import AdminNews from "./pages/admin/news";
 import AdminNewsAdd from "./pages/admin/news/add";
 import CartPage from "./pages/cart";
-// eslint-disable-next-line import/no-unresolved
 import DashboardPage from "./pages/dashboard";
 import DetailPage from "./pages/detail";
 import HomePage from "./pages/home";
-// eslint-disable-next-line import/no-unresolved
-import ProductsPage from "./pages/product";
-// eslint-disable-next-line import/no-unresolved
-import DetailProductPage from "./pages/product/detail";
+import ProductsPage from "./pages/products/index";
+import DetailProductPage from "./pages/products/detail";
 import Signin from "./pages/signin";
 import Signup from "./pages/signup";
 
