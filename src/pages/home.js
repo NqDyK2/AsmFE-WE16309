@@ -6,7 +6,7 @@ import News from "../components/news";
 const HomePage = {
     async render() {
         return /* html */`
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-7xl mx-auto">
             <div id="header">
                 ${Header.render()}
             </div>

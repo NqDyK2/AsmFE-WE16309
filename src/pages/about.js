@@ -6,16 +6,16 @@ const AboutPage = {
     render() {
         return `
         <div class="max-w-5xl mx-auto">
-        ${Header.render()}
-        <main>
-            <div class="banner">
-                ${Banner.render()}
-            </div>
-            <h1>About Page</h1>
-        </main>
-        ${Footer.render()}
-    </div>
-        
+            ${Header.render()}
+            <main>
+                <div class="banner">
+                    ${Banner.render()}
+                </div>
+                <h1>About Page</h1>
+            </main>
+            ${Footer.render()}
+        </div>
+            
         `;
     },
 };

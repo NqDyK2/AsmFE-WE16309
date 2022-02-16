@@ -5,11 +5,12 @@ const DetailPage = {
         const { data } = await get(id);
         // const result = data.find((post) => post.id === id);
         return /* html */`
-            <div>
+            <div class="max-w-5xl mx-auto">
                 <h1>${data.title}</h1>
                 <img src="${data.img}" alt="" />
                 <p>${data.desc}</p>
             </div>
+            
         `;
     },
 };
