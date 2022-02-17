@@ -52,6 +52,9 @@ const Header = {
                             </div>
                         </div>
                     </div>
+                    <form class="inline demo-search px-5" id="demo-search-lg">
+                        <input type="search" name="search" placeholder="search">
+                    </form>
                     ${localStorage.getItem("user") ? /* html */`
                     <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                         <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
@@ -100,6 +103,16 @@ const Header = {
         </nav>
         `;
     },
+
+    // search() {
+    //     document.querySelector("#demo-search-lg").addEventListener("submit", (e) => {
+    //         e.preventDefault();
+    //         // eslint-disable-next-line no-undef
+    //         const data = $$("[name=\"search\"]").value;
+    //         window.location.hash = `/productcate/${data}`;
+    //     });
+    // },
+
     afterRender() {
         const user = JSON.parse(localStorage.getItem("user"));
         const logout = document.querySelector("#logout");

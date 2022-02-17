@@ -1,5 +1,6 @@
 import Banner from "../components/banner";
 import Footer from "../components/footer";
+// eslint-disable-next-line import/no-named-as-default
 import Header from "../components/header";
 import News from "../components/news";
 import productHome from "../components/prohome";
