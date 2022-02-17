@@ -2,6 +2,7 @@ import Banner from "../components/banner";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import News from "../components/news";
+import productHome from "../components/prohome";
 
 const HomePage = {
     async render() {
@@ -17,7 +18,9 @@ const HomePage = {
                 <div class="news">
                     ${await News.render()}
                 </div>
-                
+                <div class="news">
+                    ${await productHome.render()}
+                </div>
             </main>
             <footer class="text-center">${Footer.render()} </footer>
             

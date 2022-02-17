@@ -11,13 +11,6 @@
       "title": "Marilyn Emmerich",
       "img": "http://placeimg.com/640/480/fashion",
       "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "id": "38"
-    },
-    {
-      "createdAt": "2022-01-19T09:19:10.753Z",
-      "title": "Marilyn Emmerich",
-      "img": "http://placeimg.com/640/480/fashion",
-      "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
       "id": "39"
     },
     {
@@ -34,14 +27,6 @@
       "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
       "id": "41"
     },
-    
-    {
-      "createdAt": "2022-01-19T09:19:10.753Z",
-      "title": "Marilyn Emmerich",
-      "img": "http://placeimg.com/640/480/fashion",
-      "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "id": "42"
-    },
     {
       "createdAt": "2022-01-19T10:56:31.571Z",
       "title": "Jorge Little",
@@ -56,7 +41,6 @@
       "desc": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
       "id": "44"
     }
-    
   ],
   "users": [
     {
@@ -69,6 +53,176 @@
       "email": "nqdy0110@gmail.com",
       "password": "$2a$10$gghy0i9Afgi4fTJSOmlFgOjsy3mInr9TK6mJTOc3guW8vuLxoLGR.",
       "id": 2
+    }
+  ],
+  "products": [
+    {
+      "name": "Basic Tee",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "1"
+    },
+    {
+      "name": "12335fsd",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "200",
+      "id": "2"
+    },
+    {
+      "name": "sdgfhnt2",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "300",
+      "id": "3"
+    },
+    {
+      "name": "534234",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "4"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "5"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "6"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "7"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "8"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "9"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "10"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "11"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "12"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "13"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "14"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "15"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "16"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "17"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "18"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "18"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "20"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "21"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "22"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "23"
+    },
+    {
+      "name": "Sản phẩm A",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "100",
+      "id": "24"
     }
   ]
 }
