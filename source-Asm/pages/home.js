@@ -23,7 +23,9 @@ const HomePage = {
                     ${await productHome.render()}
                 </div>
             </main>
-            <footer class="text-center">${Footer.render()} </footer>
+            <footer class="text-center">
+                ${Footer.render()}
+             </footer>
             
         </div>
             

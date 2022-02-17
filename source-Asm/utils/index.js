@@ -41,3 +41,12 @@ export const search = () => {
         window.location.hash = `/productcate/${data}`;
     });
 };
+export const setLocalStorage = (key, value) => {
+    localStorage.setItem(key, JSON.stringify(value));
+};
+// eslint-disable-next-line consistent-return
+export const getLocalStorage = (key) => {
+    if (localStorage.getItem(key)) {
+        return JSON.parse(localStorage.getItem(key));
+    }
+};

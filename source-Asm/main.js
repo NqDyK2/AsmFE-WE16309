@@ -6,7 +6,7 @@ import AdminAddPost from "./pages/admin/news/add";
 import AdminEditPost from "./pages/admin/news/edit";
 import DetailPage from "./pages/detail";
 import HomePage from "./pages/home";
-import ProductPage from "./pages/product";
+import ProductPage from "./pages/products/index";
 import Signin from "./pages/signin";
 import Signup from "./pages/signup";
 
