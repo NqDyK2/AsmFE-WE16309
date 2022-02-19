@@ -1,10 +1,10 @@
-import { get8 } from "../api/product";
+import { get8 } from "../api/products";
 
 const productHome = {
     async render() {
         const { data } = await get8();
         return /* html */ `
-        <h2 class="font-semibold text-blue-900 mt-5 uppercase text-2xl ">Quick</h2>
+        <h2 class="text-2xl font-extrabold ml-10 text-gray-900 ">Quick</h2>
         <div class="bg-white">
         <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 class="sr-only">Products</h2>

@@ -1,9 +1,13 @@
-import { getAll } from "../../api/product";
+import { getAll } from "../../api/products";
+import Header from "../../components/header";
 
 const ProductsPage = {
     async render() {
         const { data } = await getAll();
         return `
+        <div id="header">
+                ${Header.render()}
+            </div>
         <h2 class="font-semibold text-blue-900 mt-5 mb-7 uppercase text-2xl ">Shopping</h2>
         <div class="bg-white">
         <div class="max-w-7xl mx-auto py-14 px-4  ">
@@ -26,6 +30,9 @@ const ProductsPage = {
         
       </div>
         `;
+    },
+    afterRender() {
+        Header.afterRender();
     },
 };
 export default ProductsPage;
