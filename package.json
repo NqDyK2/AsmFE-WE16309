@@ -22,6 +22,7 @@
   "dependencies": {
     "axios": "^0.25.0",
     "jquery": "^3.6.0",
+    "jQuery": "^1.7.4",
     "jquery-validation": "^1.19.3",
     "navigo": "^8.11.1",
     "swiper": "^8.0.6",

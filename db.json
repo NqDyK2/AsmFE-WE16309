@@ -58,19 +58,29 @@
       "email": "duynqph16692@fpt.edu.vn",
       "password": "$2a$10$xK0LE2BSPvoJ6xmE6WbdIuS72.sldZQC/OHjyDtaCWo0Q3iVbP0CG",
       "username": "duynqph16692",
+      "role": "1",
       "id": 3
     },
     {
       "email": "nqdy0110@gmail.com",
       "password": "$2a$10$gghy0i9Afgi4fTJSOmlFgOjsy3mInr9TK6mJTOc3guW8vuLxoLGR.",
       "username": "Du Di",
+      "role": "0",
       "id": 2
     },
     {
       "email": "nguyenquyduyabc@gmail.com",
       "password": "$2a$10$1nZSHRIZZLroGu/qDkcrI.xUyhycUFOs5.FmoxjHPMl/Uq72dXlMG",
       "username": "Nguyễn Duy",
+      "role": "1",
       "id": 1
+    },
+    {
+      "email": "nqdy2002@gmail.com",
+      "password": "$2a$10$Xnanc5Cmz0/SpZFkrHBpzuKs90DNNJBs0IXPy5E167e8IGItVC./G",
+      "username": "Nguyễn Quý Duy",
+      "role": "0",
+      "id": 5
     }
   ],
   "products": [

@@ -10,7 +10,7 @@ const HomePage = {
         return /* html */`
         <div class=" mx-auto">
             <div id="header">
-                ${Header.render()}
+                ${await Header.render()}
             </div>
             <main>
                 <div class="banner">
@@ -33,7 +33,6 @@ const HomePage = {
     },
     afterRender() {
         Header.afterRender();
-        Banner.afterRender();
     },
 };
 export default HomePage;

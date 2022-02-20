@@ -14,6 +14,8 @@ import CartPage from "./pages/cart";
 import AdminProPage from "./pages/admin/products";
 import AdminProAdd from "./pages/admin/products/add";
 import AdminNProEdit from "./pages/admin/products/edit";
+import AccountPage from "./pages/admin/account";
+import EditProfile from "./pages/editProfile";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -36,6 +38,7 @@ router.on("/admin/*/", () => {}, {
 });
 router.on({
     "/": () => print(HomePage),
+    "/editprofile": () => print(EditProfile),
     "/about": () => print(AboutPage),
     "/products": () => print(ProductPage),
     "/products/:id": ({ data }) => print(DetailProductPage, data.id),
@@ -48,6 +51,7 @@ router.on({
     "/admin/product/add": () => print(AdminProAdd),
     "/admin/news/:id/edit": ({ data }) => print(AdminEditPost, data.id),
     "/admin/product/:id/edit": ({ data }) => print(AdminNProEdit, data.id),
+    "/admin/users/": () => print(AccountPage),
     "/signup": () => print(Signup),
     "/signin": () => print(Signin),
     "/cart": () => print(CartPage),
