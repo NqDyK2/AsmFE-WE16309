@@ -75,11 +75,11 @@
   ],
   "products": [
     {
-      "name": "Basic Tee",
-      "img": "http://placeimg.com/640/480/nature",
-      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
-      "id": "1"
+      "id": "1",
+      "name": "Vans Tee",
+      "price": "20",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645379620/sgy5sompn2pnblvepssm.png",
+      "desc": "Lại sửa"
     },
     {
       "name": "12335fsd",
@@ -94,13 +94,6 @@
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
       "price": "300",
       "id": "3"
-    },
-    {
-      "name": "534234",
-      "img": "http://placeimg.com/640/480/nature",
-      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
-      "id": "4"
     },
     {
       "name": "Sản phẩm A",
@@ -122,13 +115,6 @@
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
       "price": "100",
       "id": "7"
-    },
-    {
-      "name": "Sản phẩm A",
-      "img": "http://placeimg.com/640/480/nature",
-      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
-      "id": "8"
     },
     {
       "name": "Sản phẩm A",
@@ -241,6 +227,20 @@
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
       "price": "100",
       "id": "24"
+    },
+    {
+      "name": "Vans Vault Check-Board",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645378601/jbm7c69ynaevcb3zkaje.png",
+      "desc": "New Vans",
+      "price": "700",
+      "id": "myxIJhq"
+    },
+    {
+      "name": "Vans Old School",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645378785/jms21dbtwsg70utwlcjr.png",
+      "price": "70",
+      "desc": "Old School",
+      "id": "X_A3BhQ"
     }
   ]
 }

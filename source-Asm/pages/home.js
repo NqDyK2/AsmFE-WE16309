@@ -33,6 +33,7 @@ const HomePage = {
     },
     afterRender() {
         Header.afterRender();
+        Banner.afterRender();
     },
 };
 export default HomePage;

@@ -11,6 +11,9 @@ import Signin from "./pages/signin";
 import Signup from "./pages/signup";
 import DetailProductPage from "./pages/products/detail";
 import CartPage from "./pages/cart";
+import AdminProPage from "./pages/admin/products";
+import AdminProAdd from "./pages/admin/products/add";
+import AdminNProEdit from "./pages/admin/products/edit";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -39,10 +42,12 @@ router.on({
     "/news/:id": ({ data }) => print(DetailPage, data.id),
     "/admin/dashboard": () => print(Dashboard),
     // eslint-disable-next-line no-console
-    "/admin/products": () => console.log("admin product"),
+    "/admin/products": () => print(AdminProPage),
     "/admin/news": () => print(AdminNewsPage),
     "/admin/news/add": () => print(AdminAddPost),
+    "/admin/product/add": () => print(AdminProAdd),
     "/admin/news/:id/edit": ({ data }) => print(AdminEditPost, data.id),
+    "/admin/product/:id/edit": ({ data }) => print(AdminNProEdit, data.id),
     "/signup": () => print(Signup),
     "/signin": () => print(Signin),
     "/cart": () => print(CartPage),

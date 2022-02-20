@@ -1,12 +1,12 @@
 // eslint-disable-next-line import/no-unresolved
 import toastr from "toastr";
-import { getAll, remove } from "../../../api/post";
+import { getAll, remove } from "../../../api/products";
 import AdminNav from "../../../components/AdminNav";
 // eslint-disable-next-line import/no-unresolved
 import "toastr/build/toastr.min.css";
 import { reRender } from "../../../utils";
 
-const AdminNewsPage = {
+const AdminProPage = {
     async render() {
         const { data } = await getAll();
         return /* html */`
@@ -22,7 +22,7 @@ const AdminNewsPage = {
                             </h2>
                         </div>
                         <div class="mt-5 flex lg:mt-0 lg:ml-4">
-                            <a href="/#/admin/news/add" class="sm:ml-3">
+                            <a href="/#/admin/product/add" class="sm:ml-3">
                                 <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                 <!-- Heroicon name: solid/check -->
                                 <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -47,24 +47,28 @@ const AdminNewsPage = {
                                             <thead class="bg-gray-50">
                                                 <tr>
                                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">STT</th>
-                                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tên bài</th>
+                                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tên sản phẩm</th>
+                                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Đơn giá </th>
                                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Img </th>
-                                                    <th scope="col" class="relative px-6 py-3"></th>
+                                                    <th scope="col" class="relative px-6 py-3 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider "></th>
                                                 </tr>
                                             </thead>
                                             <tbody class="bg-white divide-y divide-gray-200">
-                                                ${data.map((post, index) => `
+                                                ${data.map((product, index) => `
                                                         <tr>
                                                             <td class="px-6 py-4 whitespace-nowrap">
                                                                 ${index + 1}
                                                             </td>
                                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                                ${post.title}
+                                                                ${product.name}
                                                             </td>
-                                                            <td class="px-6 py-4 whitespace-nowrap"><img src="${post.img}" width="100px"/></td>
                                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                                <a href="/#/admin/news/${post.id}/edit">Edit</a>
-                                                                <button data-id=${post.id} class="btn btn-remove inline-block px-4 py-3 text-white rounded bg-indigo-500 hover:bg-indigo-800">Delete</button>
+                                                                ${product.price}
+                                                            </td>
+                                                            <td class="px-6 py-4 whitespace-nowrap"><img src="${product.img}" width="100px"/></td>
+                                                            <td class="px-6 py-4 whitespace-nowrap">
+                                                                <a href="/#/admin/product/${product.id}/edit">Edit</a>
+                                                                <button data-id=${product.id} class="btn btn-remove inline-block px-4 py-3 text-white rounded bg-indigo-500 hover:bg-indigo-800">Delete</button>
                                                             </td>
                                                         </tr>
                                                 
@@ -97,7 +101,7 @@ const AdminNewsPage = {
                     remove(id).then(() => {
                         toastr.success("Bạn đã xóa thành công");
                     }).then(() => {
-                        reRender(AdminNewsPage, "#app");
+                        reRender(AdminProPage, "#app");
                     });
                 }
                 // remove
@@ -105,4 +109,4 @@ const AdminNewsPage = {
         });
     },
 };
-export default AdminNewsPage;
+export default AdminProPage;
