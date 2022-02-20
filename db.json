@@ -2,9 +2,9 @@
   "posts": [
     {
       "id": "skmmqmx",
-      "title": "Dyy Test thử ",
-      "img": "http://res.cloudinary.com/dielvkumg/image/upload/v1644335712/xjsyjda5xqrwjakfaxab.jpg",
-      "desc": "Test Được sẽ hiện không được sẽ không hiện"
+      "title": "Duy Test thử ",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645357576/kmpmrktrtkurzcr1dg8z.jpg",
+      "desc": "Thử thôi"
     },
     {
       "createdAt": "2022-01-19T09:19:10.753Z",
@@ -45,6 +45,12 @@
       "img": "http://res.cloudinary.com/dielvkumg/image/upload/v1645293930/lll0ben3pc6evpswulxv.jpg",
       "desc": "Test",
       "id": "UwoSo8M"
+    },
+    {
+      "title": "NqDyyK2",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645357764/fk6tzrz7d0fmrt6tfrmk.jpg",
+      "desc": "Thử nào",
+      "id": "rV5TiGX"
     }
   ],
   "users": [
@@ -52,12 +58,19 @@
       "email": "duynqph16692@fpt.edu.vn",
       "password": "$2a$10$xK0LE2BSPvoJ6xmE6WbdIuS72.sldZQC/OHjyDtaCWo0Q3iVbP0CG",
       "username": "duynqph16692",
-      "id": 1
+      "id": 3
     },
     {
       "email": "nqdy0110@gmail.com",
       "password": "$2a$10$gghy0i9Afgi4fTJSOmlFgOjsy3mInr9TK6mJTOc3guW8vuLxoLGR.",
+      "username": "Du Di",
       "id": 2
+    },
+    {
+      "email": "nguyenquyduyabc@gmail.com",
+      "password": "$2a$10$1nZSHRIZZLroGu/qDkcrI.xUyhycUFOs5.FmoxjHPMl/Uq72dXlMG",
+      "username": "Nguyễn Duy",
+      "id": 1
     }
   ],
   "products": [
