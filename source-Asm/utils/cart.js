@@ -1,3 +1,5 @@
+import { getLocalStorage } from "./index";
+
 let cart = [];
 if (localStorage.getItem("cart")) {
     cart = JSON.parse(localStorage.getItem("cart"));
@@ -43,4 +45,35 @@ export const removeItemInCart = (id, next) => {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     next();
+};
+export const getProduct = (productId) => {
+    if (localStorage.getItem("cart")) {
+        cart = getLocalStorage("cart");
+    }
+    console.log("cart", cart);
+    // eslint-disable-next-line eqeqeq
+    return cart.find((item) => item.id == productId);
+};
+
+export const getTotalPrice = () => {
+    if (localStorage.getItem("cart")) {
+        cart = getLocalStorage("cart");
+    }
+    let total = 0;
+    cart.forEach((item) => {
+        total += Number(item.price) * item.quantity;
+    });
+    return total;
+};
+
+export const getTotalItems = () => {
+    if (localStorage.getItem("cart")) {
+        cart = getLocalStorage("cart");
+    }
+    let total = 0;
+    cart.forEach((item) => {
+        total += item.quantity;
+    });
+
+    return total;
 };

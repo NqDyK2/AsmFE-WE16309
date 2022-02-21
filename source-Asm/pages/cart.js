@@ -1,6 +1,8 @@
 import toastr from "toastr";
 import { reRender } from "../utils";
-import { decreaseQuantity, increaseQuantity, removeItemInCart } from "../utils/cart";
+import {
+    decreaseQuantity, increaseQuantity, removeItemInCart,
+} from "../utils/cart";
 import "toastr/build/toastr.min.css";
 
 const CartPage = {
@@ -31,7 +33,7 @@ const CartPage = {
                                         <div> <i class="fa fa-close text-xs font-medium"></i> </div>
                                     </div>
                                 </div>
-                                    `).join("")}
+                                    
 
                                 
                             <!--
@@ -59,7 +61,7 @@ const CartPage = {
 
                                 <div class="flex justify-between items-center mt-6 pt-6 border-t">
                                     <div class="flex items-center"> <a href="/products" ><i class="fa fa-arrow-left text-sm pr-2"></i> <span class="text-md font-medium text-blue-500">Continue Shopping</span> </a> </div>
-                                    <div class="flex justify-center items-end"> <span class="text-sm font-medium text-gray-400 mr-1">Subtotal:</span> <span class="text-lg font-bold text-gray-800 "> 00$</span> </div>
+                                    <div class="flex justify-center items-end"> <span class="text-sm font-medium text-gray-400 mr-1">Subtotal:</span> <span class="text-lg font-bold text-gray-800 "> 00</span> </div>
                                 </div>
                             </div>
                             <div class=" p-5 bg-gray-800 rounded overflow-visible"> <span class="text-xl font-medium text-gray-100 block pb-3">Card Details</span> <span class="text-xs text-gray-400 ">Card Type</span>
@@ -80,6 +82,7 @@ const CartPage = {
                                 </div> <button class="h-12 w-full bg-blue-500 rounded focus:outline-none text-white hover:bg-blue-600">Check Out</button>
                             </div>
                         </div>
+                        `).join("")}
                     </div>
                 </div>
             </div>
