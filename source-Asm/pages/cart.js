@@ -29,10 +29,11 @@ const CartPage = {
                                     </div>
                                     <div class="flex justify-center items-center">
                                         <div class="pr-8 flex "> <button data-id="${item.id}" class="btn btn-decrease"> <span class="font-semibold">-</span> </button> <input type="text" class="focus:outline-none bg-gray-100 border h-6 w-8 rounded text-sm px-2 mx-2" value="${item.quantity}"> <button data-id="${item.id}" class="btn btn-increase"> <span class="font-semibold">+</span> </button> </div>
-                                        <div class="pr-8 "> <span class="text-xs font-medium">$${item.price}</span> </div>
+                                        <div class="pr-8 "> <span class="text-xs font-medium">$${item.price * item.quantity}</span> </div>
                                         <div> <i class="fa fa-close text-xs font-medium"></i> </div>
                                     </div>
                                 </div>
+                        `).join("")}
                                     
 
                                 
@@ -61,9 +62,10 @@ const CartPage = {
 
                                 <div class="flex justify-between items-center mt-6 pt-6 border-t">
                                     <div class="flex items-center"> <a href="/products" ><i class="fa fa-arrow-left text-sm pr-2"></i> <span class="text-md font-medium text-blue-500">Continue Shopping</span> </a> </div>
-                                    <div class="flex justify-center items-end"> <span class="text-sm font-medium text-gray-400 mr-1">Subtotal:</span> <span class="text-lg font-bold text-gray-800 "> 00</span> </div>
+                                    <div class="flex justify-center items-end"> <span class="text-sm font-medium text-gray-400 mr-1">Subtotal:</span> <span class="text-lg font-bold text-gray-800 ">$00</span> </div>
                                 </div>
                             </div>
+
                             <div class=" p-5 bg-gray-800 rounded overflow-visible"> <span class="text-xl font-medium text-gray-100 block pb-3">Card Details</span> <span class="text-xs text-gray-400 ">Card Type</span>
                                 <div class="overflow-visible flex justify-between items-center mt-2">
                                     <div class="rounded w-52 h-28 bg-gray-500 py-2 px-4 relative right-10"> <span class="italic text-lg font-medium text-gray-200 underline">VISA</span>
@@ -80,9 +82,9 @@ const CartPage = {
                                     </div>
                                     <div class=""> <label class="text-xs text-gray-400">CVV</label> <input type="text" class="focus:outline-none w-full h-6 bg-gray-800 text-white placeholder-gray-300 text-sm border-b border-gray-600 py-4" placeholder="XXX"> </div>
                                 </div> <button class="h-12 w-full bg-blue-500 rounded focus:outline-none text-white hover:bg-blue-600">Check Out</button>
-                            </div>
+                            
+                                </div>
                         </div>
-                        `).join("")}
                     </div>
                 </div>
             </div>

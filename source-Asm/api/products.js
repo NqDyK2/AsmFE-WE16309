@@ -20,8 +20,8 @@ export const remove = (id) => {
     const url = `/products/${id}`;
     return instance.delete(url);
 };
-export const get8 = () => {
-    const url = `/products?_page=1&_limit=8`;
+export const get4 = () => {
+    const url = `/products?_page=1&_limit=4`;
     return instance.get(url);
 };
 export const listSearch = (product) => {
