@@ -1,7 +1,7 @@
 import toastr from "toastr";
 import { reRender } from "../utils";
 import {
-    decreaseQuantity, increaseQuantity, removeItemInCart,
+    decreaseQuantity, increaseQuantity, removeItemInCart, getTotalPrice,
 } from "../utils/cart";
 import "toastr/build/toastr.min.css";
 
@@ -62,7 +62,7 @@ const CartPage = {
 
                                 <div class="flex justify-between items-center mt-6 pt-6 border-t">
                                     <div class="flex items-center"> <a href="/products" ><i class="fa fa-arrow-left text-sm pr-2"></i> <span class="text-md font-medium text-blue-500">Continue Shopping</span> </a> </div>
-                                    <div class="flex justify-center items-end"> <span class="text-sm font-medium text-gray-400 mr-1">Subtotal:</span> <span class="text-lg font-bold text-gray-800 ">$00</span> </div>
+                                    <div class="flex justify-center items-end"> <span class="text-sm font-medium text-gray-400 mr-1">Subtotal:</span> <span class="text-lg font-bold text-gray-800 ">$ ${getTotalPrice()}</span> </div>
                                 </div>
                             </div>
 

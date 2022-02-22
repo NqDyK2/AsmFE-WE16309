@@ -60,9 +60,16 @@ const Header = {
                         <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                         <span class="sr-only">View notifications</span>
                         <!-- Heroicon name: outline/bell -->
-                        <a href="/cart"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg></a>
+                        <div class="ml-4 flow-root lg:ml-6">
+                        <a href="/#/cart" class="group -m-2 p-2 flex items-center">
+                          <!-- Heroicon name: outline/shopping-bag -->
+                          <svg class="flex-shrink-0 h-6 w-6 text-white group-hover:text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                          </svg>
+                          <span class="ml-2 text-sm font-medium text-white group-hover:text-red-600" id="totalProduct">0</span>
+                          <span class="sr-only">items in cart, view bag</span>
+                      </div>
+                        </a>
                         </button>
                     
                         <!-- Profile dropdown -->
@@ -111,6 +118,9 @@ const Header = {
     // },
 
     afterRender() {
+        if (localStorage.getItem("cart")) {
+            document.getElementById("totalProduct").innerText = JSON.parse(localStorage.getItem("cart")).length;
+        }
         const user = JSON.parse(localStorage.getItem("user"));
         const logout = document.querySelector("#logout");
 

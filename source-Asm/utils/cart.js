@@ -61,19 +61,7 @@ export const getTotalPrice = () => {
     }
     let total = 0;
     cart.forEach((item) => {
-        total += Number(item.price) * item.quantity;
+        total += Number((item.price) * item.quantity);
     });
-    return total;
-};
-
-export const getTotalItems = () => {
-    if (localStorage.getItem("cart")) {
-        cart = getLocalStorage("cart");
-    }
-    let total = 0;
-    cart.forEach((item) => {
-        total += item.quantity;
-    });
-
     return total;
 };
