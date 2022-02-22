@@ -145,7 +145,7 @@ const AdminProAdd = {
             });
             // call api thêm bài viết
             add({
-                name: document.querySelector("#title-product").value,
+                nameProduct: document.querySelector("#title-product").value,
                 img: data.url,
                 price: document.querySelector("#price-product").value,
                 desc: document.querySelector("#desc-product").value,

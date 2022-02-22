@@ -16,7 +16,7 @@ const AdminNProEdit = {
                         <h2
                         class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate"
                         >
-                        Edit ${data.name}
+                        Edit ${data.nameProduct}
                         </h2>
                     </div>
                     <div class="mt-5 flex lg:mt-0 lg:ml-4">
@@ -86,7 +86,7 @@ const AdminNProEdit = {
             // call api thêm bài viết
             update({
                 id,
-                name: document.querySelector("#name-product").value,
+                nameProduct: document.querySelector("#name-product").value,
                 price: document.querySelector("#price-product").value,
                 img: imgLink || imgPreview.src,
                 desc: document.querySelector("#desc-product").value,

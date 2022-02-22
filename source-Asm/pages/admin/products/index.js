@@ -60,7 +60,7 @@ const AdminProPage = {
                                                                 ${index + 1}
                                                             </td>
                                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                                ${product.name}
+                                                                ${product.nameProduct}
                                                             </td>
                                                             <td class="px-6 py-4 whitespace-nowrap">
                                                                 ${product.price}

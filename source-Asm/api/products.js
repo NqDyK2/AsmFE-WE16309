@@ -24,8 +24,11 @@ export const get4 = () => {
     const url = `/products?_page=1&_limit=4`;
     return instance.get(url);
 };
-export const listSearch = (product) => {
-    // const url = `/products/?name_like=${data}`;
-    const url = `/products?q=${product}`;
+export const searchValue = (key, value) => {
+    const url = `/${key}?${value}`;
+    return instance.get(url);
+};
+export const searchLike = (key, value) => {
+    const url = `/${key}?${value}`;
     return instance.get(url);
 };
