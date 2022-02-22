@@ -113,11 +113,11 @@
       "id": "5"
     },
     {
-      "nameProduct": "Sản phẩm A",
-      "img": "http://placeimg.com/640/480/nature",
-      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "id": "6",
+      "nameProduct": "Vans x FoG",
       "price": "100",
-      "id": "6"
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645522565/x5pa60fgymqplvzo9224.jpg",
+      "desc": "Vans x FearOfGod"
     },
     {
       "nameProduct": "Sản phẩm A",

@@ -37,7 +37,7 @@ const AdminNProEdit = {
                 <!-- Replace with your content -->
                 <div class="px-4 py-6 sm:px-0">
                     <form id="form-add-product">
-                        <input type="text" class="border border-black" id="name-product" placeholder="Title" value="${data.name}"/><br />
+                        <input type="text" class="border border-black" id="name-product" placeholder="Title" value="${data.nameProduct}"/><br />
                         <input type="text" class="border border-black" id="price-product" placeholder="Title" value="${data.price}"/><br />
                         <div class="w-3xl grid grid-cols-2 gap-8">
                             <div><input type="file" class="border border-black" id="img-product" /></div>
