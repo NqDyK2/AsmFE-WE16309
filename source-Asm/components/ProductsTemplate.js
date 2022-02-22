@@ -12,7 +12,7 @@ const ProductsTemplate = {
                     class="w-full h-full object-center object-cover group-hover:opacity-75">
                 </div>
                 <h3 class="mt-4 text-sm text-gray-700 texxt-center">${product.nameProduct}</h3>
-                <p class="mt-1 text-lg font-medium text-gray-900">${product.price}</p>
+                <p class="mt-1 text-lg font-medium text-gray-900">${product.priceProduct}</p>
                 </a>
                 `).join("")}
             </div>

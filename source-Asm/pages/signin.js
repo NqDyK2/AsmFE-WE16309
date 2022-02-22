@@ -1,8 +1,11 @@
+/* eslint-disable import/order */
 import toastr from "toastr";
-import "toastr/build/toastr.min.css";
 import { signin } from "../api/users";
-
+import "toastr/build/toastr.min.css";
 import Header from "../components/header";
+import $ from "jquery";
+// eslint-disable-next-line no-unused-vars
+import validate from "jquery-validation";
 
 const Signin = {
     async render() {
@@ -56,30 +59,53 @@ const Signin = {
     },
     afterRender() {
         const formSignin = document.querySelector("#formSignin");
+        $("#formSignin").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true,
+                },
+                password: {
+                    required: true,
+                    minlength: 8,
+                },
+                messages: {
+                    email: {
+                        required: "Chúng tôi cần email để liên lạc với bạn.",
+                        email: "Địa chỉ email bạn nhập phải có dạng: name@domain.com.",
+                    },
+                    password: {
+                        password: "Hãy nhập đủ ít nhất 8 ký tự.",
+                        required: "Không được bỏ trống.",
+                    },
+                },
+            },
+        });
+
         formSignin.addEventListener("submit", async (e) => {
             e.preventDefault();
-            try {
-                // call API login
+            if ($("#formSignin").validate()) {
                 const { data } = await signin({
                     email: document.querySelector("#email").value,
                     password: document.querySelector("#password").value,
                 });
+                console.log("Data", data);
                 // lưu dữ liệu vào localStorage
                 localStorage.setItem("user", JSON.stringify(data.user));
-                toastr.success("Bạn đã đăng nhập thành công, chờ 3s để chuyển trang");
+                toastr.success(
+                    "Bạn đã đăng nhập thành công, chờ 3s để chuyển trang",
+                );
                 setTimeout(() => {
-                // kiểm tra quyền dựa trên ID
+                    // kiểm tra quyền dựa trên ID
                     if (data.user.id === 1) {
-                        document.location.href = "/#/admin/dashboard";
+                        document.location.href = "/admin/dashboard";
                     } else {
-                        document.location.href = "/#/";
+                        document.location.href = "/";
                     }
                 }, 3000);
-            } catch (error) {
-                toastr.error(error.response.data);
-                // console.log(error.response.data);
             }
         });
     },
+
 };
 export default Signin;

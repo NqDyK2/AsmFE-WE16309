@@ -81,7 +81,7 @@ const DetailProductPage = {
       <!-- Options -->
       <div class="mt-4 lg:mt-0 lg:row-span-3">
         <h2 class="sr-only">Product information</h2>
-        <p class="text-3xl text-gray-900">$${data.price}</p>
+        <p class="text-3xl text-gray-900">$${data.priceProduct}</p>
 
         <!-- Reviews -->
         <div class="mt-6">

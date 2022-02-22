@@ -38,7 +38,7 @@ const AdminNProEdit = {
                 <div class="px-4 py-6 sm:px-0">
                     <form id="form-add-product">
                         <input type="text" class="border border-black" id="name-product" placeholder="Title" value="${data.nameProduct}"/><br />
-                        <input type="text" class="border border-black" id="price-product" placeholder="Title" value="${data.price}"/><br />
+                        <input type="text" class="border border-black" id="price-product" placeholder="Title" value="${data.priceProduct}"/><br />
                         <div class="w-3xl grid grid-cols-2 gap-8">
                             <div><input type="file" class="border border-black" id="img-product" /></div>
                             <div><img width="200" src="${data.img}" id="img-preview"/></div>
@@ -87,7 +87,7 @@ const AdminNProEdit = {
             update({
                 id,
                 nameProduct: document.querySelector("#name-product").value,
-                price: document.querySelector("#price-product").value,
+                priceProduct: document.querySelector("#price-product").value,
                 img: imgLink || imgPreview.src,
                 desc: document.querySelector("#desc-product").value,
             });

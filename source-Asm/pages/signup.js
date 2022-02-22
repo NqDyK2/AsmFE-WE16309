@@ -1,6 +1,10 @@
+import $ from "jquery";
+// eslint-disable-next-line no-unused-vars
+import validate from "jquery-validation";
 import { signup } from "../api/users";
 // import Footer from "../components/footer";
 import Header from "../components/header";
+// eslint-disable-next-line no-unused-vars
 
 const Signup = {
     render() {
@@ -66,14 +70,46 @@ const Signup = {
     },
     afterRender() {
         const formSignup = document.querySelector("#formSignup");
+        $("#formSignup").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true,
+                },
+                password: {
+                    required: true,
+                    minlength: 8,
+                },
+                username: {
+                    required: true,
+                },
+                messages: {
+                    email: {
+                        required: "Chúng tôi cần email để liên lạc với bạn.",
+                        email:
+                    "Địa chỉ email bạn nhập phải có dạng: name@domain.com.",
+                    },
+                    username: {
+                        require: "Chúng tôi cần biết tên của bạn",
+                    },
+                    password: {
+                        password: "Hãy nhập đủ ít nhất 8 ký tự.",
+                        required: "Không được bỏ trống.",
+                    },
+                },
+            },
+        });
+
         formSignup.addEventListener("submit", (e) => {
             e.preventDefault();
-            signup({
-                username: document.querySelector("#username").value,
-                email: document.querySelector("#email").value,
-                password: document.querySelector("#password").value,
-                role: "0",
-            });
+            if ($("#formSignup").validate()) {
+                signup({
+                    username: document.querySelector("#username").value,
+                    email: document.querySelector("#email").value,
+                    password: document.querySelector("#password").value,
+                    role: "0",
+                });
+            }
         });
     },
 };

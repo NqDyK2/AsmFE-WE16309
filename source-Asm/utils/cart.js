@@ -61,7 +61,7 @@ export const getTotalPrice = () => {
     }
     let total = 0;
     cart.forEach((item) => {
-        total += Number((item.price) * item.quantity);
+        total += Number((item.priceProduct) * item.quantity);
     });
     return total;
 };

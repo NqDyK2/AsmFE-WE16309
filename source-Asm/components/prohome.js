@@ -18,7 +18,7 @@ const productHome = {
                     class="w-full h-full object-center object-cover group-hover:opacity-75">
                 </div>
                 <h3 class="mt-4 text-sm text-gray-700">${post.name}</h3>
-                <p class="mt-1 text-lg font-medium text-gray-900">${post.price}</p>
+                <p class="mt-1 text-lg font-medium text-gray-900">${post.priceProduct}</p>
                 </a>
                 `).join("")}
           </div>

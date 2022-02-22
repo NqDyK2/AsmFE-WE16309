@@ -63,7 +63,7 @@ const AdminProPage = {
                                                                 ${product.nameProduct}
                                                             </td>
                                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                                ${product.price}
+                                                                ${product.priceProduct}
                                                             </td>
                                                             <td class="px-6 py-4 whitespace-nowrap"><img src="${product.img}" width="100px"/></td>
                                                             <td class="px-6 py-4 whitespace-nowrap">

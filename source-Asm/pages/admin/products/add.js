@@ -1,4 +1,7 @@
 import axios from "axios";
+import $ from "jquery";
+// eslint-disable-next-line no-unused-vars
+import validate from "jquery-validation";
 import NavAdmin from "../../../components/AdminNav";
 import { add } from "../../../api/products";
 
@@ -22,17 +25,17 @@ const AdminProAdd = {
                     <div class="col-span-3 sm:col-span-2">
                       <div class="mt-1 flex rounded-md shadow-sm">
                       <label  class="block text-sm font-medium text-gray-700">Tên sản phẩm</label> <br>
-                    <input type="text" class="border border-black" id="title-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Title"/><br />
+                    <input type="text" class="border border-black" id="nameProductt" require class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Title"/><br>
                     <label  class="block text-sm font-medium text-gray-700">Giá</label> <br>
-                    <input type="text" class="border border-black" id="price-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Title"/><br />
+                    <input type="text" class="border border-black" id="price-product" require class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" placeholder="Title"/><br>
                       </div>
                     </div>
                   </div>
       
                   <div>
-                    <label for="about"   class="block text-sm font-medium text-gray-700"> About </label>
+                    <label for="about"   class="block text-sm font-medium text-gray-700"> Mô tả </label>
                     <div class="mt-1">
-                      <textarea id="desc-product" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="you@example.com"></textarea>
+                      <textarea id="desc" name="about" rows="3" required class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" ></textarea>
                     </div>
                     <p class="mt-2 text-sm text-gray-500">Brief description for your profile. URLs are hyperlinked.</p>
                   </div>
@@ -129,27 +132,53 @@ const AdminProAdd = {
         const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/ecommercer2021/image/upload";
         const CLOUDINARY_PRESET = "jkbdphzy";
 
+        $("#form-add-product").validate({
+            rules: {
+                nameProduct: {
+                    required: true,
+                },
+                priceProduct: {
+                    required: true,
+                },
+                desc: {
+                    required: true,
+                },
+                messages: {
+                    nameProduct: {
+                        required: "Chưa nhập tên sản paharm",
+                    },
+                    priceProduct: {
+                        require: "Sản phẩm chưa có giá",
+                    },
+                    desc: {
+                        required: "Không được bỏ trống.",
+                    },
+                },
+            },
+        });
+
         formAdd.addEventListener("submit", async (e) => {
             e.preventDefault();
-            const file = imgPost.files[0];
+            if ($("#form-add-product").validate()) {
+                const file = imgPost.files[0];
 
-            const formData = new FormData();
-            formData.append("file", file);
-            formData.append("upload_preset", CLOUDINARY_PRESET);
+                const formData = new FormData();
+                formData.append("file", file);
+                formData.append("upload_preset", CLOUDINARY_PRESET);
 
-            // call api cloudinary
-            const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
-                headers: {
-                    "Content-Type": "application/form-data",
-                },
-            });
-            // call api thêm bài viết
-            add({
-                nameProduct: document.querySelector("#title-product").value,
-                img: data.url,
-                price: document.querySelector("#price-product").value,
-                desc: document.querySelector("#desc-product").value,
-            });
+                // call api cloudinary
+                const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+                    headers: {
+                        "Content-Type": "application/form-data",
+                    },
+                });
+                add({
+                    nameProduct: document.querySelector("#nameProduct").value,
+                    img: data.url,
+                    priceProduct: document.querySelector("#priceProduct").value,
+                    desc: document.querySelector("#desc").value,
+                });
+            }
         });
     },
 };

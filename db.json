@@ -87,7 +87,7 @@
     {
       "id": "1",
       "nameProduct": "Vans Long Tee",
-      "price": "20",
+      "priceProduct": "20",
       "img": "https://res.cloudinary.com/dielvkumg/image/upload/v1645412006/longtee_udzyt4.png",
       "desc": "Lại sửa"
     },
@@ -95,27 +95,27 @@
       "nameProduct": "Vans CheckBoard Custom",
       "img": "https://res.cloudinary.com/dielvkumg/image/upload/v1645412005/Custom_qux9jc.jpg",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "200",
+      "priceProduct": "200",
       "id": "2"
     },
     {
       "nameProduct": "Vans Old Skool",
       "img": "https://res.cloudinary.com/dielvkumg/image/upload/v1645412137/v1_tydwhs.jpg",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "300",
+      "priceProduct": "300",
       "id": "3"
     },
     {
       "nameProduct": "Sk8",
       "img": "https://res.cloudinary.com/dielvkumg/image/upload/v1645412137/sk8_puozwu.jpg",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "5"
     },
     {
       "id": "6",
       "nameProduct": "Vans x FoG",
-      "price": "100",
+      "priceProduct": "100",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645522565/x5pa60fgymqplvzo9224.jpg",
       "desc": "Vans x FearOfGod"
     },
@@ -123,153 +123,153 @@
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "7"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "9"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "10"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "11"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "12"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "13"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "14"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "15"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "16"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "17"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "18"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "18"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "20"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "21"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "22"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "23"
     },
     {
       "nameProduct": "Sản phẩm A",
       "img": "http://placeimg.com/640/480/nature",
       "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "price": "100",
+      "priceProduct": "100",
       "id": "24"
     },
     {
       "nameProduct": "Vans Vault Check-Board",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645378601/jbm7c69ynaevcb3zkaje.png",
       "desc": "New Vans",
-      "price": "700",
+      "priceProduct": "700",
       "id": "myxIJhq"
     },
     {
       "nameProduct": "Vans Old School",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645378785/jms21dbtwsg70utwlcjr.png",
-      "price": "70",
+      "priceProduct": "70",
       "desc": "Old School",
       "id": "X_A3BhQ"
     },
     {
       "nameProduct": "Vans Vault Check-Board",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645414612/mrdkumlsvmbuviriaor9.gif",
-      "price": "64",
+      "priceProduct": "64",
       "desc": "fsdvxc",
       "id": "lXegxHO"
     },
     {
       "nameProduct": "Vans Vault Check-Board",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645414617/efbqfarjrl6bqdr6xe70.gif",
-      "price": "64",
+      "priceProduct": "64",
       "desc": "fsdvxc",
       "id": "wCc_6Ze"
     },
     {
       "nameProduct": "Dyy",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645519598/wlgbczyioqiiwi5qukhb.jpg",
-      "price": "999",
+      "priceProduct": "999",
       "desc": "vclkdv;",
       "id": "NN-0w9V"
     }
